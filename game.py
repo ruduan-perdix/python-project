@@ -29,4 +29,12 @@ print("1: f = forward")
 print("2: b = backward")
 print("3: l = left")
 print("4: r = right")
-print(f"Use 'f', 'b', 'l' and 'r' to navigate {name} across the map.")
+print(f"\nUse 'f', 'b', 'l' and 'r' to navigate {name} across the map.\n")
+
+# START THE GAME
+while hitpoints > 0:
+    print(f"{name}'s coordinates on the grid: {position}")
+    print(f"{name} has a total of {hitpoints} hitpoints left.")
+
+# Prompt for the command
+    command = input("Enter a command (l / r / f / b): ")
