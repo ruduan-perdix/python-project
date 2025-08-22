@@ -33,8 +33,21 @@ print(f"\nUse 'f', 'b', 'l' and 'r' to navigate {name} across the map.\n")
 
 # START THE GAME
 while hitpoints > 0:
-    print(f"{name}'s coordinates on the grid: {position}")
+    print(f"{name}'s coordinates on the grid are: {position}")
     print(f"{name} has a total of {hitpoints} hitpoints left.")
 
 # Prompt for the command
     command = input("Enter a command (l / r / f / b): ")
+
+# Implement commands
+    if command == "l":
+        print("You entered 'l' to move left.\n")
+    elif command == "r":
+        print("You entered 'r' to move right.\n")
+    elif command == "f":
+        print("You entered 'f' to move forward.\n")
+    elif command == "b":
+        print("You entered 'b' to move backward.\n")
+    else:
+        print(f"Incorrect input. You can only use 'l', 'f', 'r' and 'b' to move {name}\n")
+
