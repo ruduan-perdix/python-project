@@ -8,7 +8,7 @@ print("--------------------")
 print("Robot Game Simulator")
 print("--------------------\n")
 
-# Welcom the player
+# Welcome the player
 player = input("What is your name?: ")
 print(f"Welcome {player}!\n")
 
