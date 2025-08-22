@@ -25,11 +25,11 @@ obstacles = [(1, 1), (2, 2), (2, 3), (4,1)]
 
 print(f"Welcome Player! The rules are simple: Don't let {name} hit any obstacles!\n")
 print(f"Take note of the following commands to navigate {name} through the map:")
-print("1: f = forward")
-print("2: b = backward")
+print("1: u = up")
+print("2: d = down")
 print("3: l = left")
 print("4: r = right")
-print(f"\nUse 'f', 'b', 'l' and 'r' to navigate {name} across the map.\n")
+print(f"\nUse 'u', 'd', 'l' and 'r' to navigate {name} across the map.\n")
 
 # START THE GAME
 while hitpoints > 0:
@@ -37,17 +37,21 @@ while hitpoints > 0:
     print(f"{name} has a total of {hitpoints} hitpoints left.")
 
 # Prompt for the command
-    command = input("Enter a command (l / r / f / b): ")
+    command = input("Enter a command (u / d / l / r): ")
 
-# Implement commands
+# Implement commands and movement for the Robot
     if command == "l":
-        print("You entered 'l' to move left.\n")
+        print("\n\nYou entered 'l' to move left.\n")
+        position[0] -= 1
     elif command == "r":
-        print("You entered 'r' to move right.\n")
-    elif command == "f":
-        print("You entered 'f' to move forward.\n")
-    elif command == "b":
-        print("You entered 'b' to move backward.\n")
+        print("\n\nYou entered 'r' to move right.\n")
+        position[0] += 1
+    elif command == "u":
+        print("\n\nYou entered 'u' to move up.\n")
+        position[1] += 1
+    elif command == "d":
+        print("\n\nYou entered 'd' to move down.\n")
+        position[1] -= 1
     else:
-        print(f"Incorrect input. You can only use 'l', 'f', 'r' and 'b' to move {name}\n")
+        print(f"\n\nIncorrect input. You can only use 'l', 'f', 'r' and 'b' to move {name}\n")
 
